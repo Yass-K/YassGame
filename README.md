@@ -2,6 +2,8 @@
 
 An angular project made during my training. The back-end part is made with symfony.
 
+You can have a look on https://yassgame-42515.web.app/home
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
 ## Development server
