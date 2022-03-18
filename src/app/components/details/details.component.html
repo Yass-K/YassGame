@@ -1,0 +1,47 @@
+
+<div class="details container">
+  <div class="container-photo">
+    <div class="photo">
+      <img src="http://yassgame.herokuapp.com/images/{{game?.image}}" alt="background image" class="game-img">
+    </div>
+  </div>
+  <div class="game-content">
+
+    <div class="details-wrapper">
+<!--      <div class="game-header">-->
+        <h1 class="game-header-title mt-5">{{game?.name}}</h1>
+        <p class="game-header-description">
+          <span> {{game?.description}}  </span>
+        </p>
+        <div class="infos">
+          <div class="info">
+            <i class="p-4 fa fa-calendar fa-2x"></i>
+              <p>Sortie le <br><b>{{game?.releasedDate}}</b></p>
+          </div>
+          <div class="info">
+            <i class="p-4 fa fa fa-trophy fa-2x" aria-hidden="true"></i>
+              <p>A reçu une note de <br><b> {{game?.rating}} sur 100</b></p>
+          </div>
+          <div class="info">
+            <i class="p-4 fa fa-gamepad fa-2x" aria-hidden="true"></i>
+              <p>Disponible sur <br><b> {{game?.platform}} </b></p>
+          </div>
+          <div class="info">
+            <i class="p-4 fa fa-copyright fa-2x" aria-hidden="true"></i>
+            <p>Edité par <br><b> {{game?.editor}} </b></p>
+          </div>
+        </div>
+        <div>
+          <span class="p-3 badge">{{game?.price}} € </span>
+        </div>
+        <button class="btn-outline-primary" >Acheter</button>
+        <button [routerLink]=" '/home' " class="btn-outline-primary" >Accueil</button>
+<!--      </div>-->
+    </div>
+  </div>
+
+</div>
+
+
+
+

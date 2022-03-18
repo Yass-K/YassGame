@@ -1,0 +1,55 @@
+<section>
+  <div class="container">
+    <div class="ad addAdBox">
+      <div class="imgBox">
+        <img src="https://yassgame.herokuapp.com/images/{{game?.image}}"  alt="image non existante">
+      </div>
+      <div class="adFormBox">
+        <form [formGroup]="gameForm" (ngSubmit)="updateGame()">
+          <h2>Modification du jeu</h2>
+          <div class="form-group">
+            <label for="name" class="ms-2 text-secondary">Nom</label>
+            <input type="text" id="name" formControlName="name" [value]="game?.name">
+          </div>
+          <div class="form-group">
+            <label for="description" class="ms-2 text-secondary">Description</label>
+            <textarea formControlName="description" id="description" cols="30" rows="2" [value]="game?.description">
+          </textarea>
+          </div>
+          <div class="form-group text-center">
+            <select class="text-center" formControlName="platform" name="Plateforme" >
+                            <option> {{game?.platform}} </option>
+              <option class="text-center" *ngFor="let platform of platforms" > {{platform}} </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="price" class="ms-2 text-secondary">Prix</label>
+            <input type="number" id="price"  formControlName="price" [value]="game?.price">
+          </div>
+          <div class="form-group">
+            <label for="rating" class="ms-2 text-secondary">Note</label>
+            <input type="text" id="rating" formControlName="rating" [value]="game?.rating">
+          </div>
+          <div class="form-group">
+            <label for="editor" class="ms-2 text-secondary">Editeur</label>
+            <input type="text" id="editor" formControlName="editor" [value]="game?.editor">
+          </div>
+          <div class="form-group text-center">
+            <select class="text-center" formControlName="type" name="Genre" >
+              <option>{{game?.type}}</option>
+              <option class="text-center" *ngFor="let type of types">{{type}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="releasedDate" class="ms-2 text-secondary">Date de sortie</label>
+            <input type="text" id="releasedDate" formControlName="releasedDate" [value]="game?.releasedDate">
+          </div>
+          <button class="btn btn-primary m-4 px-4" type="submit">Valider</button>
+          <button class="btn btn-primary px-2" type="submit" [routerLink]="'/profile'">Retour </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+

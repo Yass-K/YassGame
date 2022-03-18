@@ -1,0 +1,22 @@
+<body>
+<section>
+  <div class="container">
+    <div class="user signInBox">
+      <div class="imgBox">
+        <img src="../../../../assets/images/manette.jpg" alt="">
+      </div>
+      <div class="formBox">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <h2>Connexion</h2>
+          <input type="text" formControlName="username" placeholder="Nom d'utilisateur">
+          <input type="password" formControlName="password" placeholder="Mot de passe">
+          <div class="text-center mt-3">
+          <button class="align-items-center" type="submit">Connexion</button>
+          </div>
+<!--          <p class="signUp">Vous n'avez pas de compte ? <a [routerLink]="'/register'">S'inscrire</a></p>-->
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</body>

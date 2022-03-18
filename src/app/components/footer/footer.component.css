@@ -1,0 +1,159 @@
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  background: linear-gradient(to right, #083D77 0%, #000000  51%, #800E13 100%);
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer .container .sec {
+  margin-right: 30px;
+}
+
+footer .container .sec.aboutus {
+  width: 40%;
+}
+
+footer .container  h2 {
+  position: relative;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer .container  h2:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 70px;
+  height: 2px;
+  background: #FFFFFF;
+}
+
+.sci {
+  margin-top: 20px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.sci li a:hover {
+  background: #800E13;
+}
+
+.sci li a .fa {
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+.quickLinks {
+  position: relative;
+  width: 25%;
+}
+
+.quickLinks li {
+  list-style: none;
+}
+
+.quickLinks ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-left: -30px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.quickLinks ul li a:hover {
+  color: #800E13;
+}
+
+.contact {
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.contact .info li {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.contact .info li span:nth-child(1) {
+  color: #FFFFFF;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contact .info li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.contact .info li a:hover {
+  color: #083D77;
+}
+
+.copyrightText {
+  width: 100%;
+  background: linear-gradient(to right, #083D77 0%, #000000  51%, #800E13 100%);
+  padding: 8px ;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  footer {
+    padding: 40px;
+  }
+  footer .container {
+    flex-direction: column;
+  }
+  footer .container .sec {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  footer .container .sec.aboutus,
+  .quickLinks,
+  .contact {
+    width: 100%;
+  }
+  .copyrightText {
+    padding: 8px 40px;
+  }
+}

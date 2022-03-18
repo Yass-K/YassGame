@@ -1,0 +1,78 @@
+<section id="section-one">
+  <div class="container" id="first-div">
+    <div class="contactInfo">
+      <div>
+        <h2>Demande d'inscription</h2>
+          <p class="infos-text">
+            Vous souhaitez vous inscrire afin de pouvoir contribuer à notre communauté
+            et vendre vos nombreux jeux sur notre plateforme en ligne. <br>
+            Vous êtes au bon endroit, renseignez ce formulaire et notre
+            administrateur s'occcupera de vous enregistrer. <br>
+            A très bientôt.
+          </p>
+      </div>
+      <ul class="social-medias">
+        <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-twitter-square"></i></a></li>
+        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+        <li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+      </ul>
+    </div>
+    <div class="contactForm">
+      <h2>Formulaire d'inscription</h2>
+      <div class="formBox">
+        <div class="inputBox w-50">
+          <input type="text" required>
+          <span>Nom et prénom</span>
+        </div>
+        <div class="inputBox w-50">
+          <input type="email" required>
+          <span>E-mail</span>
+        </div>
+        <div class="inputBox w-50">
+          <input type="text" required>
+          <span>Adresse</span>
+        </div>
+        <div class="inputBox w-50">
+          <input type="tel" required>
+          <span>Numéro de téléphone</span>
+        </div>
+        <div class="inputBox w-50">
+          <input type="text" required>
+          <span>Nom d'utilisateur</span>
+        </div>
+        <div class="inputBox w-50">
+          <input type="password" required>
+          <span>Mot de passe</span>
+        </div>
+
+        <div class="inputBox w-100">
+          <button class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)">Envoyer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title"><p>Message envoyé</p></h4>
+    <button type="button" class="close btn-outline-primary" aria-label="Close" (click)="modal.dismiss('Cross click')"
+            [routerLink]="['/home']">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Votre demande d'inscription a bien été prise en compte<br>
+      Nous vous répondrons par mail dans les plus brefs délais <br>
+      Merci de votre confiance.
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="m-3 btn btn-outline-primary" (click)="modal.close('Close click')"
+            [routerLink]="['/home']" >Fermer</button>
+  </div>
+</ng-template>
+
+

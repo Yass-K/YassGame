@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+  margin: 35px 35px;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+h6 {
+  font-style: italic;
+}
+
+span {
+  font-weight: bold;
+}

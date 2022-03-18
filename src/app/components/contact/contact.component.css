@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#section-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    rgba(186, 18, 0, 0.26),
+    rgba(7, 66, 145, 0.33)
+  ),
+  url("../../../assets/images/thelastofus2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#section-one:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  /*background: #800E13;*/
+  /*background: -moz-linear-gradient(45deg, #800E13 0%, #000000 50%, #083D77 100%);*/
+  /*background: -webkit-linear-gradient(45deg, #083D77 100% , #000000 50%, #800E13 0% );*/
+  /*background: linear-gradient(45deg, #800E13 0%, #000000 50%, #083D77 100%);*/
+}
+
+#first-div {
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+
+#first-div .contactInfo {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: #800E13;
+  background: -moz-linear-gradient(45deg, #800E13 0%, #000000 50%, #083D77 100%);
+  background: -webkit-linear-gradient(45deg, #083D77 100% , #000000 50%, #800E13 0% );
+  background: linear-gradient(45deg, #800E13 0%, #000000 50%, #083D77 100%);
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+}
+
+#first-div .contactInfo h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#first-div .contactInfo ul.info-contact {
+  position: relative;
+  margin: 20px 0;
+}
+
+#first-div .contactInfo ul.info-contact li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+#first-div .contactInfo ul.info-contact li span:nth-child(1) {
+  width: 0;
+  min-width: 30px;
+}
+
+#first-div .contactInfo ul.info-contact li span:nth-child(1) i {
+  max-width: 100%;
+  filter: invert(1);
+}
+
+#first-div .contactInfo ul.info-contact li span:nth-child(2) {
+  color: #fff;
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+#first-div .contactInfo ul.social-medias {
+  position: relative;
+  display: flex;
+}
+
+#first-div .contactInfo ul.social-medias li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+#first-div .contactInfo ul.social-medias li a {
+  text-decoration: none;
+}
+
+#first-div .contactInfo ul.social-medias li a i {
+  color: #fff;
+  font-size: 30px;
+}
+
+#first-div .contactForm {
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+#first-div .contactForm h2 {
+  color: #083d77;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#first-div .contactForm .formBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+#first-div .contactForm .formBox .inputBox {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+#first-div .contactForm .formBox .inputBox.w-50 {
+  width: 47%;
+}
+
+#first-div .contactForm .formBox .inputBox.w-100 {
+  width: 100%;
+}
+
+#first-div .contactForm .formBox .inputBox input,
+#first-div .contactForm .formBox .inputBox textarea {
+  width: 90%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+#first-div .contactForm .formBox .inputBox textarea {
+  height: 100px;
+  width: 95%;
+}
+
+#first-div .contactForm .formBox .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+#first-div .contactForm .formBox .inputBox input:focus ~ span,
+#first-div .contactForm .formBox .inputBox input:valid ~ span,
+#first-div .contactForm .formBox .inputBox textarea:focus ~ span,
+#first-div .contactForm .formBox .inputBox textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #083d77;
+
+}
+
+#first-div .contactForm .formBox .inputBox button,
+.btn-outline-primary {
+  position: relative;
+  cursor: pointer;
+  background: #800E13;
+  background: -moz-linear-gradient(45deg, #800E13 0%, #000000 50%, #083D77 100%);
+  background: -webkit-linear-gradient(45deg, #083D77 100% , #000000 50%, #800E13 0% );
+  background: linear-gradient(45deg, #800E13 0%, #000000 50%, #083D77 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  max-width: 150px;
+  padding: 12px;
+}
+
+.btn-outline-primary:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+
+/*** Responsive ***/
+
+@media (max-width: 1200px) {
+  #first-div {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+  #first-div .contactInfo {
+    top: 0;
+    height: 550px;
+    position: relative;
+    box-shadow: none;
+  }
+  #first-div .contactForm {
+    position: relative;
+    width: calc(100% - 350px);
+    /*padding-left: 0;*/
+    margin-left: 0;
+    padding: 40px;
+    height: 550px;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 991px) {
+  #section-one {
+    background-image: linear-gradient(
+      rgba(186, 18, 0, 0.26),
+      rgba(7, 66, 145, 0.33)
+    ),
+    url("../../../assets/images/thelastofus2.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  #section-one:before {
+    display: none;
+  }
+  #first-div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #first-div .contactForm {
+    width: 100%;
+    height: auto;
+  }
+  #first-div .contactInfo {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+  }
+  #first-div .contactInfo ul.social-medias {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #first-div .contactForm {
+    padding: 25px;
+  }
+  #first-div .contactInfo {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #first-div .contactInfo ul.social-medias {
+    margin-top: 35px;
+  }
+  #first-div .contactForm .formBox .inputBox.w-50 {
+    width: 100%;
+  }
+}

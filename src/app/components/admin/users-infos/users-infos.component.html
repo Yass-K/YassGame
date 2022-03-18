@@ -1,0 +1,72 @@
+<div class="container bootdey flex-grow-1 container-p-y">
+
+  <div class="media align-items-center py-3 mb-3">
+    <h1 class="text-center mb-3">YassAdmin</h1>
+    <div class="media-body ml-4" >
+      <img src="../../../../assets/images/logo_yass.png" alt="logo_site"
+           [routerLink]="['/home']" class="d-block ui-w-100 rounded-circle">
+<!--      <button class="btn btn-outline" [routerLink]="['/register']" >Ajouter un utilisateur </button>-->
+<!--      <span> Nombre d'inscrits : <br></span>-->
+
+      <!--      <button class="btn btn-dark" (click)="logout()" >Déconnexion</button>-->
+    </div>
+  </div>
+  <div class="card mb-4">
+    <div class="card-body">
+      <div class="table-responsive">
+        <h3 class="text-center">Informations de l'utilisateur {{usersInfos?.username}}</h3>
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="infos-user">
+              <div>
+                <p>Nom et prénom  </p>
+                <span>{{usersInfos?.lastname}} {{usersInfos?.firstname}}</span>
+              </div>
+              <div>
+                <p>Email </p>
+                <span>{{usersInfos?.email}}</span>
+              </div>
+              <div>
+                <p>Adresse </p>
+                <span>{{usersInfos?.address}}</span>
+              </div>
+              <div>
+                <p>Numéro de téléphone </p>
+                <span>{{usersInfos?.phoneNumber}}</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" [routerLink]="['/admin-update-user/',usersInfos?.id]">Modifier</button>
+          </div>
+        </div>
+        <div class="infos-title">
+          <h3 class="text-center">Liste des jeux de l'utilisateur</h3>
+          <h6 class="text-center"><i>Nombre de jeux : </i>{{gamesNumber}}</h6>
+        </div>
+        <table class="table card-table m-0">
+
+          <tbody>
+          <tr>
+            <th>Référence</th>
+            <th>Nom</th>
+            <th>Genre</th>
+            <th>Plateforme</th>
+            <th>Note</th>
+            <th>Date de sortie</th>
+          </tr>
+          <tr *ngFor="let game of usersGames">
+            <td>{{game?.id}}</td>
+            <td>{{game?.name}}</td>
+            <td>{{game?.type}}</td>
+            <td>{{game?.platform}}</td>
+            <td>{{game?.rating}}</td>
+            <td>{{game?.releasedDate}}</td>
+            <td><button class="btn btn-outline-primary" [routerLink]="['/update-game/',game.id]">Modifier</button></td>
+            <td><button class="btn btn-outline-danger" (click)="deleteGame(game.id)">Supprimer</button></td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+

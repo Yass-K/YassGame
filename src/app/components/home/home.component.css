@@ -1,0 +1,96 @@
+header {
+  background-image: linear-gradient(
+    rgba(186, 18, 0, 0.49),
+    rgba(7, 66, 145, 0.53)
+  ),
+  url(../../../assets/images/thelastofus2.jpg);
+  background-position: center;
+  background-size: 1900px;
+}
+
+header {
+  padding: 70px;
+}
+
+.overflow-auto {
+  height: 150px;
+  /*overflow-y: scroll;*/
+}
+
+.dpdn-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-outline-primary {
+  background-image: linear-gradient(to right, #083D77 0%, #000000  51%, #800E13 100%);
+  margin: 10px;
+  padding: 9px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border: none;
+  border-radius: 10px;
+  width: 160px;
+}
+
+button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+div.custom-slider  {
+  max-width: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-outline {
+  background-image: linear-gradient(to right, #083D77 0%, #000000  51%, #800E13 100%);
+  text-decoration: none;
+  margin: 8px;
+  padding: 9px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border: none;
+  border-radius: 10px;
+  max-height: 60px;
+  min-width: 160px;
+}
+
+.card:hover {
+  box-shadow: 4px 3px 8px 6px rgba(8, 61, 119, 0.76);
+  transform: translateY(-3px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: fill;
+}
+
+.card-body-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+hr {
+  border: 1px solid #083D77;
+}
+
+.button {
+  text-align: center;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+  background: #800E13;
+}

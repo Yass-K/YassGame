@@ -1,0 +1,28 @@
+<section>
+  <div class="container">
+    <div class="user signUpBox">
+      <div class="imgBox">
+        <img src="../../../../assets/images/start.jpg" alt="">
+      </div>
+      <div class="formBox">
+        <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+          <h2>Inscription</h2>
+          <input type="text" formControlName="lastname" placeholder="Nom">
+          <input type="text" formControlName="firstname" placeholder="Prénom">
+          <input type="text" formControlName="username" placeholder="Nom d'utilisateur">
+          <input type="password" formControlName="password" placeholder="Mot de passe" minlength="4">
+          <input type="email" formControlName="email" placeholder="E-mail">
+          <input type="text" formControlName="address" placeholder="Adresse">
+          <input type="tel" formControlName="phoneNumber" placeholder="Numéro de téléphone" minlength="10"
+                 maxlength="10">
+
+          <input type="submit" value="Valider">
+          <p class="signUp">
+            <a [routerLink]=" ['/admin-profile'] "> Retour à l'interface de gestion </a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+

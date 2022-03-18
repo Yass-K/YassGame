@@ -1,0 +1,81 @@
+<section id="section-one">
+  <div class="container" id="first-div">
+    <div class="contactInfo">
+      <div>
+        <h2>Contact Info</h2>
+        <ul class="info-contact">
+          <li>
+            <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+            <span>69 rue de Gaston <br>
+                  69800 Saint-priest </span>
+          </li>
+          <li>
+            <span><i class="fa fa-envelope"></i></span>
+            <span>MrLodevie@gmail.com </span>
+          </li>
+          <li>
+            <span><i class="fa fa-phone-square-alt" aria-hidden="true"></i></span>
+            <span>+33 6 28 61 85 06 </span>
+          </li>
+        </ul>
+      </div>
+      <ul class="social-medias">
+        <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-twitter-square"></i></a></li>
+        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+        <li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+      </ul>
+    </div>
+    <div class="contactForm">
+      <h2>Envoyer un message</h2>
+      <div class="formBox">
+        <div class="inputBox w-50">
+          <input type="text" required>
+          <span>Nom</span>
+        </div>
+        <div class="inputBox w-50">
+          <input type="text" required>
+          <span>Prénom</span>
+        </div>
+        <div class="inputBox w-50">
+          <input type="email" required>
+          <span>Adresse mail</span>
+        </div>
+        <div class="inputBox w-50">
+          <input type="text" required>
+          <span>Numéro de téléphone</span>
+        </div>
+        <div class="inputBox w-100">
+          <textarea required></textarea>
+          <span>Ecrivez votre message ici...</span>
+        </div>
+        <div class="inputBox w-100">
+          <button class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)">Envoyer</button>
+<!--          <input type="submit" value="Envoyer" >-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title"><p>Message envoyé</p></h4>
+    <button type="button" class="close btn-outline-primary" aria-label="Close" (click)="modal.dismiss('Cross click')"
+            [routerLink]="['/home']">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Votre message a bien été envoyé a notre administrateur.<br>
+      Nous tâcherons de vous répondre d'ici 3 jours maximum. <br>
+      Merci
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="m-3 btn btn-outline-primary" (click)="modal.close('Close click')"
+            [routerLink]="['/home']" >Fermer</button>
+  </div>
+</ng-template>
+

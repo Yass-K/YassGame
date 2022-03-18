@@ -1,0 +1,45 @@
+<div class="container bootdey flex-grow-1 container-p-y">
+
+  <div class="media align-items-center py-3 mb-3">
+    <h1 class="text-center mb-3">YassAdmin</h1>
+    <div class="media-body ml-4" >
+      <img src="../../../../assets/images/logo_yass.png" alt="logo_site"
+           [routerLink]="['/home']" class="d-block ui-w-100 rounded-circle">
+      <button class="btn btn-outline" [routerLink]="['/register']" >Ajouter un utilisateur </button>
+      <span> Nombre d'inscrits: <br>{{usersTotal}}</span>
+      <button class="btn btn-outline" [routerLink]="['/games-list']" >Liste des jeux </button>
+      <button class="btn btn-outline" (click)="logout()" >Déconnexion</button>
+
+<!--      <button class="btn btn-dark" (click)="logout()" >Déconnexion</button>-->
+    </div>
+  </div>
+  <div class="card mb-4">
+    <div class="card-body">
+    <div class="table-responsive">
+      <h3 class="text-center">Liste des utilisateurs</h3>
+      <table class="table card-table m-0">
+        <tbody>
+        <tr>
+          <th>Nom d'utilisateur</th>
+<!--          <th>Nom et prénom</th>-->
+          <th>E-mail</th>
+<!--          <th>Adresse</th>-->
+          <th>Numéro de téléphone</th>
+
+        </tr>
+        <tr>
+        <tr *ngFor="let infos of usersInfos">
+          <td>{{infos?.username}}</td>
+          <td>{{infos?.email}}</td>
+          <td>{{infos?.phoneNumber}}</td>
+          <td><button class="btn btn-outline-primary" [routerLink]="['/users-infos/',infos.id]">Voir en détails</button></td>
+          <td><button class="btn btn-outline-danger" (click)="deleteUser(infos?.id)">Supprimer</button></td>
+        </tr>
+        <tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+

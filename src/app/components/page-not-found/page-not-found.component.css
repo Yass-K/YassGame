@@ -1,0 +1,29 @@
+.container {
+  margin-top: 25px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.btn-outline-primary {
+  background-image: linear-gradient(to right, #083D77 0%, #000000  51%, #800E13 100%);
+  margin: 10px;
+  padding: 9px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border: none;
+  border-radius: 10px;
+  width: 160px;
+}
+
+.btn-outline-primary:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
